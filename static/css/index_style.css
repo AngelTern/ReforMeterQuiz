@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Serif Georgian', serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/bg_img_home-e16572d3bc53d2518b2a66c8cb24eeff3cbe72c5975dc94e6a07f14bb74d10ba.jpg');
+    background-size: cover; /* This ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center;
+    box-sizing: border-box;
+}
+
+/* Add this CSS for the fade-out effect */
+body.fadeOut {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.quiz-container {
+    text-align: center;
+    background-color: #fff;
+    width: 90%;
+    max-width: 430px;
+    max-height: 750px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}

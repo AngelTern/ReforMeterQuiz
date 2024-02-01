@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quiz Starting Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}">
+    
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>რეფორმეტრის ქვიზი</h1>
+        <p>დაწყებამდე მიუთითოთ მცირედი ინფორმაცია თქვენზე</p>
+
+        <form action ="/" method = "post" id="quizForm">
+            <div>
+                <label for="age">ასაკი:</label>
+                <select id="age" name="age" required>
+                    <option value="" disabled selected>აირჩიეთ ასაკი</option>
+                    <option value="below29">29-ზე ნაკლები</option>
+                    <option value="29andabove">29 და 29-ზე მეტი</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="gender">სქესი:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>აირჩიეთ სქესი</option>
+                    <option value="male">კაცი</option>
+                    <option value="female">ქალი</option>
+                    <option value="other">სხვა</option>
+                </select>
+            </div>
+            <br>
+            <!-- Updated button with event listener -->
+            <button type="submit" id="startQuizBtn">დაწყება</button>
+        </form>
+    </div>
+
+    <script>
+        // Function to navigate to the next page
+        function navigateToPage(url) {
+            document.body.classList.add('fadeOut');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500); // Adjust the delay as needed
+        }
+
+        // Event listener for the button
+        document.getElementById('startQuizBtn').addEventListener('click', function() {
+            navigateToPage('quiz.html'); // Adjust the target page accordingly
+        });
+    </script>
+</body>
+</html>
