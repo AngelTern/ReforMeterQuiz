@@ -9,14 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets\styles\style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_style.css') }}">
         <!-- Inside the <head> section of index.html -->
-    <script>
-        if (performance.navigation.type === 1) {
-            // Page is being reloaded
-            window.location.href = 'title_page.html';
-        }
-    </script>
 
     </head>
     <body>
@@ -43,6 +37,6 @@
             });
 
         </script>
-        <script src="assets\scripts\script.js" async defer></script>
+        <script src="{{ url_for('static', filename='scripts/script.js') }}" async defer></script>
     </body>
 </html>

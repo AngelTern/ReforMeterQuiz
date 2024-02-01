@@ -12,7 +12,7 @@
         <h1>რეფორმეტრის ქვიზი</h1>
         <p>დაწყებამდე მიუთითოთ მცირედი ინფორმაცია თქვენზე</p>
 
-        <form action ="/" method = "post" id="quizForm">
+        <form action="/submit" method="post" id="quizForm">
             <div>
                 <label for="age">ასაკი:</label>
                 <select id="age" name="age" required>
@@ -33,7 +33,7 @@
             </div>
             <br>
             <!-- Updated button with event listener -->
-            <button type="submit" id="startQuizBtn">დაწყება</button>
+            <button type="submit" value = "Submit" id="startQuizBtn">დაწყება</button>
         </form>
     </div>
 
@@ -45,11 +45,6 @@
                 window.location.href = url;
             }, 500); // Adjust the delay as needed
         }
-
-        // Event listener for the button
-        document.getElementById('startQuizBtn').addEventListener('click', function() {
-            navigateToPage('quiz.html'); // Adjust the target page accordingly
-        });
     </script>
 </body>
 </html>
